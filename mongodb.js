@@ -8,7 +8,6 @@ connect.then(() => {
     console.error("Database connection error:", error);
   });
 
-// Define a schema for users with 'name' and 'password' fields
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -20,9 +19,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-
-// Create a Mongoose model based on the schema; note the model name is 'User'
 const User = mongoose.model("users", userSchema);
 
-// Export the model for use in other files
 module.exports = User;
